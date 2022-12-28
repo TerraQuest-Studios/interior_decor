@@ -69,7 +69,7 @@ minetest.register_node("interior_decor:mug", {
     groups = {oddly_breakable_by_hand = 3},
 })
 
---TODO: fix texture mapping
+--TODO: fix model? works, dunno if i did it right
 minetest.register_node("interior_decor:flower_pot", {
     description = "interior decor flower_pot",
     drawtype = "mesh",
@@ -80,7 +80,6 @@ minetest.register_node("interior_decor:flower_pot", {
         "interior_decor_flower_pot_rose_1.png",
         "interior_decor_flower_pot_rose_1.png",
         "interior_decor_flower_pot_pot.png",
-
     },
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),

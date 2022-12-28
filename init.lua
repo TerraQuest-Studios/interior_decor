@@ -70,17 +70,21 @@ minetest.register_node("interior_decor:mug", {
 })
 
 --TODO: fix texture mapping
---[[ minetest.register_node("interior_decor:flower_pot", {
+minetest.register_node("interior_decor:flower_pot", {
     description = "interior decor flower_pot",
     drawtype = "mesh",
     paramtype2 = "facedir",
     mesh = "interior_decor_flower_pot.obj",
     tiles = {
+        "[combine:16x16",
+        "interior_decor_flower_pot_rose_1.png",
+        "interior_decor_flower_pot_rose_1.png",
         "interior_decor_flower_pot_pot.png",
+
     },
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
     groups = {oddly_breakable_by_hand = 3},
-}) ]]
+})
 
 --TODO: add clock, piano

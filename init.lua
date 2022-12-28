@@ -57,3 +57,14 @@ minetest.register_node("interior_decor:globe", {
     wield_scale = vector.new(0.0625,0.0625,0.0625),
     groups = {oddly_breakable_by_hand = 3},
 })
+
+minetest.register_node("interior_decor:mug", {
+    description = "interior decor mug",
+    drawtype = "mesh",
+    paramtype2 = "facedir",
+    mesh = "interior_decor_mug.obj",
+    tiles = {"interior_decor_mug.png"},
+    visual_scale = 0.0625, -- 1/16
+    wield_scale = vector.new(0.0625,0.0625,0.0625),
+    groups = {oddly_breakable_by_hand = 3},
+})

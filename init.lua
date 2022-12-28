@@ -36,7 +36,7 @@ minetest.register_node("interior_decor:books", {
 
 --TODO: fix up this model more, texture mapping
 --[[ minetest.register_node("interior_decor:gramophone", {
-    description = "interior decor books",
+    description = "interior decor gramophone",
     drawtype = "mesh",
     paramtype2 = "facedir",
     mesh = "interior_decor_gramophone.obj",
@@ -46,3 +46,14 @@ minetest.register_node("interior_decor:books", {
     groups = {oddly_breakable_by_hand = 3},
     --TODO: make work with music disks or something
 }) ]]
+
+minetest.register_node("interior_decor:globe", {
+    description = "interior decor globe",
+    drawtype = "mesh",
+    paramtype2 = "facedir",
+    mesh = "interior_decor_globe.obj",
+    tiles = {"interior_decor_globe.png"},
+    visual_scale = 0.0625, -- 1/16
+    wield_scale = vector.new(0.0625,0.0625,0.0625),
+    groups = {oddly_breakable_by_hand = 3},
+})

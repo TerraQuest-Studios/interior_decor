@@ -6,6 +6,7 @@ minetest.register_node("interior_decor:crate", {
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
     groups = {oddly_breakable_by_hand = 3},
+    --TODO: add storage or something
 })
 
 minetest.register_node("interior_decor:drawer", {
@@ -14,6 +15,18 @@ minetest.register_node("interior_decor:drawer", {
     paramtype2 = "facedir",
     mesh = "interior_decor_drawer.obj",
     tiles = {"interior_decor_drawer.png"},
+    visual_scale = 0.0625, -- 1/16
+    wield_scale = vector.new(0.0625,0.0625,0.0625),
+    groups = {oddly_breakable_by_hand = 3},
+    --TODO: add storage or something
+})
+
+minetest.register_node("interior_decor:books", {
+    description = "interior decor books",
+    drawtype = "mesh",
+    paramtype2 = "facedir",
+    mesh = "interior_decor_books.obj",
+    tiles = {"interior_decor_books.png"},
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
     groups = {oddly_breakable_by_hand = 3},

@@ -118,5 +118,3 @@ minetest.register_node("interior_decor:piano", {
     wield_scale = vector.new(0.0625,0.0625,0.0625),
     groups = {oddly_breakable_by_hand = 3},
 })
-
---TODO: add bench

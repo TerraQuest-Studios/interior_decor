@@ -76,10 +76,9 @@ minetest.register_node("interior_decor:flower_pot", {
     paramtype2 = "facedir",
     mesh = "interior_decor_flower_pot.obj",
     tiles = {
-        "[combine:16x16",
-        "interior_decor_flower_pot_rose_1.png",
-        "interior_decor_flower_pot_rose_1.png",
         "interior_decor_flower_pot_pot.png",
+        "interior_decor_flower_pot_rose_1.png",
+        "interior_decor_flower_pot_rose_2.png",
     },
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),

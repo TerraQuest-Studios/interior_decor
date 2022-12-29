@@ -34,18 +34,21 @@ minetest.register_node("interior_decor:books", {
     groups = {oddly_breakable_by_hand = 3},
 })
 
---TODO: fix up this model more, texture mapping
---[[ minetest.register_node("interior_decor:gramophone", {
+minetest.register_node("interior_decor:gramophone", {
     description = "interior decor gramophone",
     drawtype = "mesh",
     paramtype2 = "facedir",
     mesh = "interior_decor_gramophone.obj",
-    tiles = {"interior_decor_gramophone.png", "[combine:16x16"},
+    tiles = {
+        "interior_decor_gramophone_base.png",
+        "interior_decor_gramophone_horn.png",
+        "interior_decor_gramophone_record.png",
+    },
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
     groups = {oddly_breakable_by_hand = 3},
     --TODO: make work with music disks or something
-}) ]]
+})
 
 minetest.register_node("interior_decor:globe", {
     description = "interior decor globe",
@@ -69,7 +72,6 @@ minetest.register_node("interior_decor:mug", {
     groups = {oddly_breakable_by_hand = 3},
 })
 
---TODO: fix model? works, dunno if i did it right
 minetest.register_node("interior_decor:flower_pot", {
     description = "interior decor flower_pot",
     drawtype = "mesh",

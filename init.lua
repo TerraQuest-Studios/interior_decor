@@ -73,7 +73,7 @@ minetest.register_node("interior_decor:mug", {
 })
 
 minetest.register_node("interior_decor:flower_pot", {
-    description = "interior decor flower_pot",
+    description = "interior decor flower pot",
     drawtype = "mesh",
     paramtype2 = "facedir",
     mesh = "interior_decor_flower_pot.obj",
@@ -87,4 +87,22 @@ minetest.register_node("interior_decor:flower_pot", {
     groups = {oddly_breakable_by_hand = 3},
 })
 
---TODO: add clock, piano
+minetest.register_node("interior_decor:grandfather_clock", {
+    description = "interior decor grandfather clock",
+    drawtype = "mesh",
+    paramtype2 = "facedir",
+    mesh = "interior_decor_grandfather_clock.obj",
+    tiles = {
+        "interior_decor_grandfather_clock_base.png",
+        "interior_decor_grandfather_clock_b.png",
+        "interior_decor_grandfather_clock_m0.png",
+        "interior_decor_grandfather_clock_m0.png", --m1
+        "interior_decor_grandfather_clock_c.png",
+        "interior_decor_grandfather_clock_a.png",
+    },
+    visual_scale = 0.0625, -- 1/16
+    wield_scale = vector.new(0.0625,0.0625,0.0625),
+    groups = {oddly_breakable_by_hand = 3},
+})
+
+--TODO: add bench, piano

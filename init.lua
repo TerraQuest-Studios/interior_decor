@@ -105,4 +105,18 @@ minetest.register_node("interior_decor:grandfather_clock", {
     groups = {oddly_breakable_by_hand = 3},
 })
 
---TODO: add bench, piano
+minetest.register_node("interior_decor:piano", {
+    description = "interior decor piano",
+    drawtype = "mesh",
+    paramtype2 = "facedir",
+    mesh = "interior_decor_piano.obj",
+    tiles = {
+        "interior_decor_piano_base.png",
+        "interior_decor_piano_parts.png",
+    },
+    visual_scale = 0.0625, -- 1/16
+    wield_scale = vector.new(0.0625,0.0625,0.0625),
+    groups = {oddly_breakable_by_hand = 3},
+})
+
+--TODO: add bench

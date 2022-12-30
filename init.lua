@@ -1,6 +1,7 @@
 minetest.register_node("interior_decor:crate", {
     description = "interior decor crate",
     drawtype = "mesh",
+    paramtype = "light",
     mesh = "interior_decor_crate.obj",
     tiles = {"interior_decor_crate.png"},
     visual_scale = 0.0625, -- 1/16
@@ -62,6 +63,7 @@ minetest.register_node("interior_decor:crate", {
 minetest.register_node("interior_decor:drawer", {
     description = "interior decor drawer",
     drawtype = "mesh",
+    paramtype = "light",
     paramtype2 = "facedir",
     mesh = "interior_decor_drawer.obj",
     tiles = {"interior_decor_drawer.png"},
@@ -74,6 +76,7 @@ minetest.register_node("interior_decor:drawer", {
 minetest.register_node("interior_decor:books", {
     description = "interior decor books",
     drawtype = "mesh",
+    paramtype = "light",
     paramtype2 = "facedir",
     mesh = "interior_decor_books.obj",
     tiles = {"interior_decor_books.png"},
@@ -85,6 +88,7 @@ minetest.register_node("interior_decor:books", {
 minetest.register_node("interior_decor:gramophone", {
     description = "interior decor gramophone",
     drawtype = "mesh",
+    paramtype = "light",
     paramtype2 = "facedir",
     mesh = "interior_decor_gramophone.obj",
     tiles = {
@@ -101,6 +105,7 @@ minetest.register_node("interior_decor:gramophone", {
 minetest.register_node("interior_decor:globe", {
     description = "interior decor globe",
     drawtype = "mesh",
+    paramtype = "light",
     paramtype2 = "facedir",
     mesh = "interior_decor_globe.obj",
     tiles = {"interior_decor_globe.png"},
@@ -112,6 +117,7 @@ minetest.register_node("interior_decor:globe", {
 minetest.register_node("interior_decor:mug", {
     description = "interior decor mug",
     drawtype = "mesh",
+    paramtype = "light",
     paramtype2 = "facedir",
     mesh = "interior_decor_mug.obj",
     tiles = {"interior_decor_mug.png"},
@@ -123,6 +129,7 @@ minetest.register_node("interior_decor:mug", {
 minetest.register_node("interior_decor:flower_pot", {
     description = "interior decor flower pot",
     drawtype = "mesh",
+    paramtype = "light",
     paramtype2 = "facedir",
     mesh = "interior_decor_flower_pot.obj",
     tiles = {
@@ -138,6 +145,7 @@ minetest.register_node("interior_decor:flower_pot", {
 minetest.register_node("interior_decor:grandfather_clock", {
     description = "interior decor grandfather clock",
     drawtype = "mesh",
+    paramtype = "light",
     paramtype2 = "facedir",
     mesh = "interior_decor_grandfather_clock.obj",
     tiles = {
@@ -156,6 +164,7 @@ minetest.register_node("interior_decor:grandfather_clock", {
 minetest.register_node("interior_decor:piano", {
     description = "interior decor piano",
     drawtype = "mesh",
+    paramtype = "light",
     paramtype2 = "facedir",
     mesh = "interior_decor_piano.obj",
     tiles = {

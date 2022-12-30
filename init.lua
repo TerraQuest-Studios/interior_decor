@@ -25,6 +25,11 @@ minetest.register_node("interior_decor:crate", {
             minetest.get_meta(pointed_thing.above):set_string(
                 "description", itemstack:get_meta():get("description")
             )
+        else
+            local description = placer and placer:get_player_name() .. "'s crate" or "unknown's crate"
+            minetest.get_meta(pointed_thing.above):set_string(
+                "description", description
+            )
         end
         return ipv
     end,
@@ -32,14 +37,16 @@ minetest.register_node("interior_decor:crate", {
         local fnpos = table.concat({pos.x, pos.y, pos.z}, ",")
         local fs = {
             "size[8,8]",
+            "label[0,-0.25;" .. minetest.get_meta(pos):get_string("description") .. "]",
             "style_type[list;spacing=0.1]",
             "list[nodemeta:" .. fnpos .. ";main;0,0.3;9,3;]",
+            "label[0,3.2;Inventory]",
             "style_type[list;spacing=0.25]", --reset to default
             "list[current_player;main;0,3.75;8,4;]",
             "listring[nodemeta:" .. fnpos .. ";main]",
             "listring[current_player;main]",
         }
-        --TODO: support i3, show description if present in the formspec - else default to playername crate
+        --TODO: support i3
 
         minetest.show_formspec(clicker:get_player_name(), "interior_decor:crate_fs", table.concat(fs, ""))
     end,
@@ -112,6 +119,7 @@ minetest.register_node("interior_decor:globe", {
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
     groups = {oddly_breakable_by_hand = 3},
+    --TODO: open up formspec with minimap of area, with you are here and optional support for markers or whatever
 })
 
 minetest.register_node("interior_decor:mug", {

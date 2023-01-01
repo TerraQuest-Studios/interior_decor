@@ -46,7 +46,7 @@ minetest.register_node("interior_decor:crate", {
             "listring[nodemeta:" .. fnpos .. ";main]",
             "listring[current_player;main]",
         }
-        --TODO: support i3
+        --TODO: support i3, add checkbox for locking to placing player or not
 
         minetest.show_formspec(clicker:get_player_name(), "interior_decor:crate_fs", table.concat(fs, ""))
     end,
@@ -77,7 +77,58 @@ minetest.register_node("interior_decor:drawer", {
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
     groups = {oddly_breakable_by_hand = 3},
-    --TODO: add storage or something
+    on_construct = function(pos)
+        minetest.get_meta(pos):get_inventory():set_size("main", 9*2)
+    end,
+    on_place = function(itemstack, placer, pointed_thing)
+        local ipv = minetest.item_place(itemstack, placer, pointed_thing)
+
+        if itemstack:get_meta():get("description") then
+            minetest.get_meta(pointed_thing.above):set_string(
+                "description", itemstack:get_meta():get("description")
+            )
+        else
+            local description = placer and placer:get_player_name() .. "'s drawer" or "unknown's drawer"
+            minetest.get_meta(pointed_thing.above):set_string(
+                "description", description
+            )
+        end
+        return ipv
+    end,
+    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+        local fnpos = table.concat({pos.x, pos.y, pos.z}, ",")
+        local fs = {
+            "size[8,7]",
+            "label[0,-0.25;" .. minetest.get_meta(pos):get_string("description") .. "]",
+            "style_type[list;spacing=0.1]",
+            "list[nodemeta:" .. fnpos .. ";main;0,0.3;9,2;]",
+            "label[0,2.2;Inventory]",
+            "style_type[list;spacing=0.25]", --reset to default
+            "list[current_player;main;0,2.75;8,4;]",
+            "listring[nodemeta:" .. fnpos .. ";main]",
+            "listring[current_player;main]",
+        }
+        --TODO: support i3, add checkbox for locking to placing player or not
+
+        minetest.show_formspec(clicker:get_player_name(), "interior_decor:crate_fs", table.concat(fs, ""))
+    end,
+    on_dig = function(pos, node, digger)
+        local inv = minetest.get_inventory({type="node", pos=pos})
+        for _, item in ipairs(inv:get_list("main")) do
+            local posi = {
+                x=pos.x + (math.random(-2,2)/5),
+                y=pos.y + (math.random(0,2)/5),
+                z=pos.z + (math.random(-2,2)/5),
+            }
+            minetest.add_item(posi, item)
+        end
+        minetest.node_dig(pos, node, digger)
+    end,
+    preserve_metadata = function(pos, oldnode, oldmeta, drops)
+        if minetest.get_meta(pos):get("description") then
+            drops[1]:get_meta():set_string("description", minetest.get_meta(pos):get_string("description"))
+        end
+    end,
 })
 
 minetest.register_node("interior_decor:books", {

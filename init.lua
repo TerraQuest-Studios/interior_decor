@@ -38,6 +38,7 @@ minetest.register_node("interior_decor:crate", {
         local fnpos = table.concat({pos.x, pos.y, pos.z}, ",")
         local fs = {
             "size[8,8]",
+            "listcolors[#00000069;#5A5A5A;#141318;#30434C;#FFF]",
             "label[0,-0.25;" .. minetest.get_meta(pos):get_string("description") .. "]",
             "style_type[list;spacing=0.1]",
             "list[nodemeta:" .. fnpos .. ";main;0,0.3;9,3;]",
@@ -101,6 +102,7 @@ minetest.register_node("interior_decor:drawer", {
         local fnpos = table.concat({pos.x, pos.y, pos.z}, ",")
         local fs = {
             "size[8,7]",
+            "listcolors[#00000069;#5A5A5A;#141318;#30434C;#FFF]",
             "label[0,-0.25;" .. minetest.get_meta(pos):get_string("description") .. "]",
             "style_type[list;spacing=0.1]",
             "list[nodemeta:" .. fnpos .. ";main;0,0.3;9,2;]",

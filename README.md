@@ -1,4 +1,4 @@
-# Minetest UFO_Ship Mod
+# Minetest Interior Decor Mod
 
 [![ContentDB](https://content.minetest.net/packages/wsor4035/interior_decor/shields/downloads/)](https://content.minetest.net/packages/wsor4035/interior_decor/)
 ![Luacheck](https://github.com/TerraQuest-Studios/interior_decor/workflows/luacheck/badge.svg)

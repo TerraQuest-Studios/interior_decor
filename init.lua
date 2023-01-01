@@ -6,7 +6,8 @@ minetest.register_node("interior_decor:crate", {
     tiles = {"interior_decor_crate.png"},
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
-    groups = {oddly_breakable_by_hand = 3},
+    groups = {oddly_breakable_by_hand = 3, axey=2},
+    _mcl_hardness=0.6,
     on_construct = function(pos)
         minetest.get_meta(pos):get_inventory():set_size("main", 9*3)
     end,
@@ -76,7 +77,8 @@ minetest.register_node("interior_decor:drawer", {
     tiles = {"interior_decor_drawer.png"},
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
-    groups = {oddly_breakable_by_hand = 3},
+    groups = {oddly_breakable_by_hand = 3, axey=2},
+    _mcl_hardness=0.6,
     on_construct = function(pos)
         minetest.get_meta(pos):get_inventory():set_size("main", 9*2)
     end,
@@ -140,7 +142,8 @@ minetest.register_node("interior_decor:books", {
     tiles = {"interior_decor_books.png"},
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
-    groups = {oddly_breakable_by_hand = 3},
+    groups = {oddly_breakable_by_hand = 3, axey=2},
+    _mcl_hardness=0.6,
 })
 
 minetest.register_node("interior_decor:gramophone", {
@@ -156,7 +159,8 @@ minetest.register_node("interior_decor:gramophone", {
     },
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
-    groups = {oddly_breakable_by_hand = 3},
+    groups = {oddly_breakable_by_hand = 3, axey=2},
+    _mcl_hardness=0.6,
     --TODO: make work with music disks or something
 })
 
@@ -169,7 +173,8 @@ minetest.register_node("interior_decor:globe", {
     tiles = {"interior_decor_globe.png"},
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
-    groups = {oddly_breakable_by_hand = 3},
+    groups = {oddly_breakable_by_hand = 3, axey=2},
+    _mcl_hardness=0.6,
     --TODO: open up formspec with minimap of area, with you are here and optional support for markers or whatever
 })
 
@@ -182,7 +187,8 @@ minetest.register_node("interior_decor:mug", {
     tiles = {"interior_decor_mug.png"},
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
-    groups = {oddly_breakable_by_hand = 3},
+    groups = {oddly_breakable_by_hand = 3, axey=2},
+    _mcl_hardness=0.6,
 })
 
 minetest.register_node("interior_decor:flower_pot", {
@@ -198,7 +204,8 @@ minetest.register_node("interior_decor:flower_pot", {
     },
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
-    groups = {oddly_breakable_by_hand = 3},
+    groups = {oddly_breakable_by_hand = 3, axey=2},
+    _mcl_hardness=0.6,
 })
 
 minetest.register_node("interior_decor:grandfather_clock", {
@@ -217,7 +224,8 @@ minetest.register_node("interior_decor:grandfather_clock", {
     },
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
-    groups = {oddly_breakable_by_hand = 3},
+    groups = {oddly_breakable_by_hand = 3, axey=2},
+    _mcl_hardness=0.6,
 })
 
 minetest.register_node("interior_decor:piano", {
@@ -232,5 +240,6 @@ minetest.register_node("interior_decor:piano", {
     },
     visual_scale = 0.0625, -- 1/16
     wield_scale = vector.new(0.0625,0.0625,0.0625),
-    groups = {oddly_breakable_by_hand = 3},
+    groups = {oddly_breakable_by_hand = 3, axey=2},
+    _mcl_hardness=0.6,
 })

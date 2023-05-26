@@ -20,3 +20,5 @@ Mod made for fun with open source model found by Lemente. Sorry for making yet a
 ## Setup
 
 download mod, make sure its named interior_decor  
+
+some nodes have functionalities.

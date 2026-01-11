@@ -163,6 +163,7 @@ minetest.register_node("interior_decor:gramophone", {
     wield_scale = vector.new(0.0625,0.0625,0.0625),
     groups = {oddly_breakable_by_hand = 3, axey=2},
     _mcl_hardness=0.6,
+    use_texture_alpha = "blend",
     --TODO: make work with music disks or something
 })
 
@@ -208,6 +209,7 @@ minetest.register_node("interior_decor:flower_pot", {
     wield_scale = vector.new(0.0625,0.0625,0.0625),
     groups = {oddly_breakable_by_hand = 3, axey=2},
     _mcl_hardness=0.6,
+    use_texture_alpha = "blend",
 })
 
 minetest.register_node("interior_decor:grandfather_clock", {
@@ -228,6 +230,7 @@ minetest.register_node("interior_decor:grandfather_clock", {
     wield_scale = vector.new(0.0625,0.0625,0.0625),
     groups = {oddly_breakable_by_hand = 3, axey=2},
     _mcl_hardness=0.6,
+    use_texture_alpha = "blend",
 })
 
 minetest.register_node("interior_decor:piano", {
